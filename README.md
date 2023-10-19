@@ -2,7 +2,7 @@
 
  - [Live site](https://task-master-with-firebase.vercel.app/)
  
- - [Server repo](https://task-master-with-firebase.vercel.app/)
+ - [Server repo](https://github.com/abukawsar45/task-master-server.git)
  
  ## Technology
  1.React with vite
