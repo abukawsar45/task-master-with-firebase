@@ -2,8 +2,16 @@ import { Menu, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import { signOut } from 'firebase/auth';
 import auth from '../../utils/firebase.config';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/features/user/userSlice';
 
 export default function MenuDropdown({ children }) {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    signOut(auth);
+    dispatch(logout());
+    console.log('object');
+  };
   return (
     <Menu as='div' className='relative inline-block text-left bg-white z-[999]'>
       <div>
@@ -45,7 +53,7 @@ export default function MenuDropdown({ children }) {
             <Menu.Item>
               {({ active }) => (
                 <button
-                  onClick={() => signOut(auth)}
+                  onClick={() => handleLogout()}
                   className={`${
                     active ? 'bg-primary text-white' : 'text-gray-900'
                   } group flex w-full items-center rounded-md px-2 py-2 text-sm`}

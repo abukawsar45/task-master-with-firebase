@@ -8,6 +8,7 @@ import Archive from '../pages/Archive';
 import Login from '../pages/Login';
 import Signup from '../pages/Signup';
 import PrivateRoute from '../components/layouts/PrivateRoute';
+
 const routes = createBrowserRouter([
   {
     path: '/',
