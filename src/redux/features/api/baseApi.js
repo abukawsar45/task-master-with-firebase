@@ -2,7 +2,9 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseApi = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'https://taskmaster-server-roan.vercel.app',
+  }),
   tagTypes: ['Tasks'],
   endpoints: (builder) => ({
     getTasks: builder.query({
